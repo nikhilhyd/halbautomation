@@ -1,0 +1,64 @@
+---------------
+Pre Requisites:
+---------------
+    Copy LiquidSecurity Driver Package File and master PEK to current Directory.
+    Edit config.py File and update tests params according to your needs. For example:
+    Make sure qemu-ifup and qemu-ifdown are present in this folder. This is already covered in the script file.
+
+-------------
+How to Start:
+-------------
+
+    python halb-setup.py
+
+
+File Directory
+.
+├── config.py
+├── functions.py
+├── halb-setup.py
+├── Readme.txt
+├── sample.xml
+├── scp.py
+├── ssh.py
+└── vmfunctions.py
+
+------------------
+File Descriptions
+------------------
+
+halb-setup.py  : Main file where script starts executing. Configures Virtual Bridge and Launches VMs.
+
+functions.py   : Contains various sub routines to configure bridge, launch vms, find IPs etc.
+
+vmfunctions.py : Contains sub routines to login to VM and Install Driver Package.
+
+scp.py         : Contains code to transfer SCP files to VMs.
+
+ssh.py         : Contains code to login to VMs.
+
+sample.xml     : Reference file to create Bridge.
+
+config.py      : Contains various configurable parameter used by different sub routines in other files.
+
+-----------------------------
+Python Specific Requirements:
+-----------------------------
+setuptools
+python3-devel
+
+-> python3-pip  list | grep -i crypto
+asn1crypto (0.24.0)
+cryptography (2.1.4)
+
+--------------------------
+Requiremnts for paramiko
+--------------------------
+python-pip install --upgrade setuptools
+yum install  python3-devel
+yum install gcc libffi-devel python-devel openssl-devel
+python-pip install cryptography --force-reinstall
+python-pip install paramiko --force-reinstall
+python-pip install enum34
+python-pip install ipaddress
+

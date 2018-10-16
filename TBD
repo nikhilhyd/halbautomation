@@ -1,0 +1,14 @@
+=====
+TBD
+=====
+-> add code to check if virbr0 already exists in below path
+/etc/libvirt/qemu
+Grep the files for virbr0 string.
+
+#-> Add code to install driver on host machine if new machine. // DONE
+
+#-> Add code to match number of partitions and VMs to power on. // DONE
+
+#-> Add function to log commands executed. // DONE
+
+#-> Remove dependency of copying master pek at the beginning. Start from HSM zeroize.
