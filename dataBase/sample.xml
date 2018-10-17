@@ -1,0 +1,23 @@
+<!--
+WARNING: THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
+OVERWRITTEN AND LOST. Changes to this xml configuration should be made using:
+  virsh net-edit default
+or other application using the libvirt API.
+-->
+
+<network>
+  <name>CH1</name>
+  <uuid>CH2</uuid>
+  <forward dev='CH3' mode='nat'>
+    <nat>
+      <port start='1024' end='65535'/>
+    </nat>
+    <interface dev='CH4'/>
+  </forward>
+  <bridge name='CH5' stp='on' delay='0'/>
+  <ip address='CH6' netmask='255.255.255.0'>
+    <dhcp>
+      <range start='CH7' end='CH8'/>
+    </dhcp>
+  </ip>
+</network>
